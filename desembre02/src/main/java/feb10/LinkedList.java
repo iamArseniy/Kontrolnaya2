@@ -1,6 +1,6 @@
-package dec16;
+package feb10;
 
-public class LinkedList implements Queue{
+public class LinkedList implements Queue {
 
     Node head;
     Node tail;
