@@ -1,0 +1,31 @@
+import kontrol2.FileInformation;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class FileInformationTest {
+
+    @Test
+    public void testEven1() {
+        byte[] data = new byte[] { 0x00, 0x01, 0x01, 0x10, 0x11 };
+        int result = FileInformation.calculateEven(data);
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void testEven2() {
+        byte[] data = new byte[] { 0x00, 0x01, 0x11, 0x10, 0x11 };
+        int result = FileInformation.calculateEven(data);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void testEven3() {
+        byte[] data = new byte[] {};
+        int result = FileInformation.calculateEven(data);
+        assertEquals(0, result);
+    }
+
+
+
+}
